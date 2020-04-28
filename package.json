@@ -1,0 +1,24 @@
+{
+  "name": "anydoor",
+  "version": "1.0.0",
+  "description": "tiny nodejs static web server\r ## 使用方法",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weishunjie-github/node-anydoor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weishunjie-github/node-anydoor/issues"
+  },
+  "homepage": "https://github.com/weishunjie-github/node-anydoor#readme",
+  "dependencies": {
+    "-": "0.0.1",
+    "g": "^2.0.1",
+    "nodemon": "^2.0.3"
+  }
+}
