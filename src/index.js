@@ -1,2 +1,2 @@
-console.log("22")
-
+// eslint-disable-next-line no-console
+console.log

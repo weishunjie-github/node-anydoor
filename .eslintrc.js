@@ -1,12 +1,12 @@
 module.exports = {
-  "extends": ["eslint:recommonded"],
+  "extends": ["eslint:recommended"],
   "rules": {
     "no-console": ["error", {
       "allow": ["warn", "error", "info"]
     }]
   },
-  "parse": "babel-eslint",
-  "parseOption": {
+  "parser": "babel-eslint",
+  "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "script"
   },

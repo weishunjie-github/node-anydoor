@@ -4,8 +4,14 @@
   "description": "tiny nodejs static web server\r ## 使用方法",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
   },
+  "pre-commit": [
+    "fix",
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/weishunjie-github/node-anydoor.git"
@@ -20,5 +26,10 @@
     "-": "0.0.1",
     "g": "^2.0.1",
     "nodemon": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "pre-commit": "^1.2.2"
   }
 }
