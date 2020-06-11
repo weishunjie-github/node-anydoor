@@ -25,6 +25,7 @@
   "dependencies": {
     "-": "0.0.1",
     "g": "^2.0.1",
+    "handlebars": "^4.7.6",
     "nodemon": "^2.0.3"
   },
   "devDependencies": {
