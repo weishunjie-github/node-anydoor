@@ -24,6 +24,7 @@
   "homepage": "https://github.com/weishunjie-github/node-anydoor#readme",
   "dependencies": {
     "-": "0.0.1",
+    "curl": "^0.1.4",
     "g": "^2.0.1",
     "handlebars": "^4.7.6",
     "nodemon": "^2.0.3"

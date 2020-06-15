@@ -5,9 +5,10 @@ const promisify = require('util').promisify;
 const stat = promisify(fs.stat);
 const readdir = promisify(fs.readdir);//拿到文件目录下的所有文件
 const config = require('../config/defaultConfig')
-const mime = require('./mine')
+const mime = require('./mime')
 const compress = require('./compress')
 const range = require('./range')
+const isFresh = require("./cache")
 
 const tplPath = path.join(__dirname, '../template/dir.tpl');
 const source = fs.readFileSync(tplPath);
@@ -18,8 +19,13 @@ module.exports = async function (req, res, filePath) {
   try {
     const stats = await stat(filePath)
     if (stats.isFile()) {
-      const contentType = mime(filePath)
+      const contentType =  mime(filePath)
       res.setHeader("Content-Type", contentType)
+      if(isFresh(stats,res,req)){
+        res.statusCode = 304;
+        res.end();
+        return;
+      }
       let rs;
       const { code, start, end } = range(stats.size, req, res);
       if (code == 200) {
