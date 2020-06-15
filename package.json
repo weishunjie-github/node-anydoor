@@ -27,7 +27,8 @@
     "curl": "^0.1.4",
     "g": "^2.0.1",
     "handlebars": "^4.7.6",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
