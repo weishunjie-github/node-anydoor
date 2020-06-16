@@ -1,7 +1,7 @@
 const yargs = require('yargs');//命令行設置工具   commender   yargs  可以去看文檔
-const Server = require('app');
+const Server = require('./app');
 const argv = yargs
-  .usage('anywhere [option]')
+  .usage('anywhere [options]')
   .option('p', {
     alias: 'port',
     describe: '端口号',
@@ -16,7 +16,7 @@ const argv = yargs
     default: process.cwd()
   }).version().
   alias('v', 'version').
-  help().argv();
+  help().argv;
 
   const server = new Server(argv);
   server.start();
