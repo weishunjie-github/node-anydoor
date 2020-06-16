@@ -2,7 +2,7 @@
   "name": "anydoor",
   "version": "1.0.0",
   "description": "tiny nodejs static web server\r ## 使用方法",
-  "main": "build/index.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
